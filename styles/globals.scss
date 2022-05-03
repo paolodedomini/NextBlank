@@ -1,0 +1,231 @@
+@import "./fonts";
+@import "./mixin/container";
+@import "./mixin/column";
+@import "./variabili";
+@import "./mixin/_typo";
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "source-sans";
+  font-weight: normal;
+  color: $black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+h1, h2 {
+  @include titles("source-sans", 60px, $blue);
+  line-height: 70px;
+  margin: 0 0 1rem 0;
+  @media screen and($large){
+    font-size: 40px;
+  }
+}
+h3 {
+  @include titles("source-sans", 40px, $blue);
+  line-height: 48px;
+  font-weight: normal;
+  margin: 0 0 1rem 0;
+}
+p {
+  @include titles("source-sans", 20px, $black);
+  line-height: 30px;
+}
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+  * Show the overflow in IE.
+  * 1. Show the overflow in Edge.
+  */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+  * Remove the inheritance of text transform in Edge, Firefox, and IE.
+  * 1. Remove the inheritance of text transform in Firefox.
+  */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+  * Correct the inability to style clickable types in iOS and Safari.
+  */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  border: 0;
+  outline: 0;
+}
+header {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+main {
+  margin-top: 1rem;
+  &.home {
+    margin-top: 7rem;
+  }
+}
+/* ANCHOR: map */
+
+.mapboxgl-map {
+  max-width: 1630px;
+  margin: 0 auto 6rem auto;
+}
+
+
+/* ANCHOR swiper */
+.swiper-lazy-preloader-black {
+  --swiper-preloader-color: #7586aa !important;
+}
+.swiper-pagination {
+  span {
+    background-color: $yellow;
+    width: 110px;
+    border-radius: 0;
+    @media screen and ($tablet) {
+      width: 50px;
+    }
+  }
+}
+
+.logo-wrapper {
+  cursor: pointer;
+}
+/* */
+
+/* SECTION CONTAINERS  */
+
+.full-width {
+  @include container();
+  width: 100%;
+  position: relative;
+  transition: all ease-in-out 0.3s;
+  &.fixed {
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    height: 100px;
+  }
+}
+.main-container {
+  @include container(1640px);
+  display: block;
+  position: initial;
+}
+.main-head {
+  @include container();
+  justify-content: space-between;
+  z-index: 3;
+  padding: 0 20px;
+  margin-top: 1rem;
+  @media screen and ($tablet) {
+    flex-direction: row;
+  }
+}
+section.blocco_0,
+section.blocco_1,
+section.blocco_2,
+section.blocco_6,
+section.breadcrumb,
+section.magazine-page,
+footer {
+  @include container();
+  z-index: 0;
+}
+section.blocco_0 {
+  max-width: 2048px;
+  @media screen and ($tablet) {
+    flex-direction: row;
+  }
+}
+section.blocco_1 {
+  max-width: 1640px;
+  margin-top: 13rem;
+  margin-bottom: 12rem;
+  @media screen and ($tablet) {
+    margin: 2rem 0;
+  }
+  @include col(2);
+  &.reverse {
+    flex-direction: row-reverse;
+    @media screen and ($tablet) {
+      flex-direction: column;
+    }
+  }
+}
+
+section.blocco_2 {
+  max-width: 1640px;
+  background-color: $bluedark;
+  padding: 4rem;
+  position: relative;
+}
+
+section.blocco_6 {
+  max-width: 1640px;
+  padding: 4rem;
+  position: relative;
+  @media screen and ($tablet) {
+    padding: 20px;
+  }
+}
+section.breadcrumb {
+  max-width: 1640px;
+  margin: 8rem auto 3rem auto;
+}
+section.magazine-page {
+  max-width: 1640px;
+  padding: 2rem 1rem 1rem 1rem;
+  box-shadow: 0px 0px 4px #d8d8d8;
+  margin-bottom: 2rem;
+  .col-1 {
+    flex: 1;
+    max-width: 450px;
+  }
+  .col-2 {
+    flex: 1 1;
+    margin-left: 1.5rem;
+    max-width: 900px;
+  }
+}
+footer {
+  margin: 2rem 0;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,108 @@
+@import "../../styles/_variabili";
+.wrapperLista {
+  width: 100%;
+  min-height: 500px;
+  ul {
+    list-style: none;
+    padding: 0;
+    position: relative;
+  }
+  .listaheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.evento {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 1rem 1.5rem 0rem;
+  margin: 10px 0;
+  border-left: 2px solid $bluedark;
+  padding-left: 10px;
+  cursor: pointer;
+  color: $bluedark;
+  transition: all ease-in-out 0.2s;
+@media screen and($tablet){
+  flex-wrap: wrap;
+}
+  &:hover {
+    color: $blue;
+    background-color: aliceblue;
+
+    border-left: 10px solid $yellow;
+    .data {
+      span {
+        background-color: $yellow;
+        svg path {
+          stroke: white;
+        }
+      }
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    flex-shrink: 1;
+    font-weight: bold;
+  }
+  .data {
+    font-size: 20px;
+    width: 233px;
+    text-align: right;
+    flex-shrink: 0;
+    span {
+      font-size: 13px;
+      background: aliceblue;
+      height: 30px;
+      width: 30px;
+      display: inline-block;
+      border-radius: 50%;
+      line-height: 35px;
+      text-align: center;
+      margin-left: 25px;
+      transition: all ease-in-out 0.2s;
+    }
+  }
+}
+
+/* CARDS */
+.cardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  position: relative;
+  .card {
+    max-width: 450px;
+    height: 450px;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    .textCard{
+      padding: 1rem;
+      height: 100%;
+      background-color: aliceblue;
+     
+      .title{
+        font-size: 20px;
+        color: $bluedark;
+        margin-bottom: 10px;
+      }
+      .data{
+        font-weight: bold;
+        color: $gray;
+        font-size: 18px;
+      }
+    }
+    .cardImage{
+      overflow: hidden;
+      max-height: 250px;
+      img{
+        object-fit: cover;
+      }
+    }
+  }
+}

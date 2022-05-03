@@ -1,0 +1,19 @@
+@import '../../styles/_variabili';
+.mainButtons{
+    display: flex;
+    list-style: none;
+
+    li{
+        margin: 1rem;
+    }
+}
+.menubtn{
+    cursor: pointer;
+    font-size: 28px;
+    path{stroke: $blue;}
+}
+.closebtn{
+    cursor: pointer;
+    font-size: 28px;
+   path{stroke: white;}
+}

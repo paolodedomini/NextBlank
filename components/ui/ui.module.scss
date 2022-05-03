@@ -1,0 +1,23 @@
+@import "../../styles/_variabili";
+
+.readMore {
+  color: $yellow;
+  border: 3px solid $yellow;
+  display: inline-block;
+  padding: 1rem 3rem;
+  transition: all ease-in-out 0.3s;
+  font-size: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: $yellow;
+    color: white;
+  }
+}
+.gotopage{
+    font-family: $fontPrimary;
+    font-size: 28px;
+    color: $yellow;
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+}

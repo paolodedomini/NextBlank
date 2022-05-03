@@ -1,0 +1,34 @@
+@import "../../styles/_variabili";
+
+.filtribox {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and($tablet){
+    flex-direction: column;
+  }
+  li {
+    margin: 1rem;
+    border: 2px solid $bluedark;
+    padding: 1rem;
+    font-weight: bold;
+    color: $bluedark;
+    transition: all ease-in-out 0.3s;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        border-color: $yellow;
+        background-color: $yellow;
+        color: white;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .active{
+    border: 2px solid $yellow;
+    background-color: $yellow;
+    color: white;
+}
+
+}
+

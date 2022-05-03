@@ -1,0 +1,23 @@
+@import "../../styles/variabili.scss";
+
+.preloader {
+  position: fixed;
+  display: flex;
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .wrapperImg {
+    margin-bottom: 1rem;
+  }
+  .iconLoader {
+    max-width: 100px;
+    svg {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../styles/variabili';
+.wrapperText{
+    margin-left: 123px;
+    max-width: 630px;
+    @media screen and ($large) {
+        margin:20px
+    }
+}
+.wrapperImage{
+    margin-left: 123px;
+    @media screen and ($large) {
+        margin:20px
+    }
+}

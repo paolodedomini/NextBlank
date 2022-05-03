@@ -1,0 +1,59 @@
+@import "../../styles/_variabili";
+
+.text {
+  color: white;
+}
+.title {
+  color: white;
+}
+
+.wrappertext {
+  max-width: 400px;
+}
+.calltoaction {
+  color: $black;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  max-width: 800px;
+  margin-left: 4rem;
+}
+.ctaBtn {
+  display: inline-block;
+  font-family: $fontPrimary;
+  font-size: 20px;
+  color: $yellow;
+  border: 2px solid $yellow;
+  padding: 1rem;
+  background-color: $bluedark;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  a {
+    color: $yellow;
+    transition: all ease-in-out 0.3s;
+  }
+  &:hover {
+    background-color: $yellow;
+    a {
+      color: white;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #fec870;
+    z-index: -2;
+    top: 50%;
+  }
+}
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}

@@ -1,0 +1,97 @@
+@import "../../styles/_variabili";
+
+.wrapperSlider {
+    flex: 1;
+}
+
+.homeSlider {
+    overflow: hidden;
+    height: 42vw;
+    @media screen and($phone){height: 200px;}
+}
+
+.innerSlide {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.dots {
+    position: relative;
+    z-index: 10;
+    top: -15px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.singleDot {
+    flex: 1;
+    height: 5px;
+    margin: 0 3px;
+    cursor: pointer;
+
+    &.isSelected {
+        background-color: $yellow;
+    }
+}
+
+.embla__container {
+    display: flex;
+    height: 100%;
+}
+
+.embla__slide {
+    position: relative;
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+}
+
+.isSelected {
+    .wrapperText {
+        opacity: 0;
+    }
+}
+
+.wrapperText {
+    margin-left: 10%;
+
+    h2 {
+        font-size: 70px;
+        color: white;
+        margin: 0 0 1rem 0;
+
+        @media screen and ($tablet) {
+            font-size: 30px;
+            margin: 0;
+            line-height: 1;
+        }
+    }
+
+    h3 {
+        font-size: 40px;
+        color: white;
+        margin: 0;
+
+
+        @media screen and ($tablet) {
+            font-size: 20px;
+            line-height: 1;
+        }
+    }
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+}
+
+.imageOver {
+    position: absolute;
+    right: 0;
+    top: -10px;
+    max-width: 1000px;
+}

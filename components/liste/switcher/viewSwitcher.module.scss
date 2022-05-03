@@ -1,0 +1,18 @@
+@import "../../../styles/_variabili";
+.switcher {
+  display: flex;
+
+  > * {
+    font-size: 2rem;
+    margin: 0.5rem;
+      cursor: pointer;
+    &:hover {
+        svg path {
+            stroke: $yellow;
+          }
+    }
+    svg path {
+      stroke: $bluedark;
+    }
+  }
+}
